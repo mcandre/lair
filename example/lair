@@ -3,21 +3,21 @@ use File::Directory::Tree;
 
 class Lair {
     method default {
-        self.test;
+        self.test
     }
 
     method build {
         "bin".IO.mkdir :p;
-        run <cc -o bin/hello hello.c>;
+        run <cc -o bin/hello hello.c>
     }
 
     method clean {
-        rmtree 'bin';
+        rmtree 'bin'
     }
 
     method test {
         self.build;
-        run <bin/hello>;
+        run <bin/hello>
     }
 }
 
@@ -34,8 +34,8 @@ sub main {
             exit 1;
         }
 
-        $lair."$arg"();
+        $lair."$arg"()
     }
 }
 
-main;
+main
