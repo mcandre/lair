@@ -41,7 +41,7 @@ We don't believe in vendor locking for software development tools.
 
 lair runs on a wide variety of platforms, including Linux, UNIX, and Windows. This helps to promote a higher degree of portability for your applications.
 
-lair is operating system agnostic, programming language agnostic, and build system agnostic. In fact, we recommend delegating many tasks from lair to project specific build systems!
+lair is operating system agnostic, programming language agnostic, and build system agnostic. In fact, we recommend delegating many tasks from lair to project-specific build systems!
 
 ## Speed
 
