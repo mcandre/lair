@@ -39,7 +39,7 @@ In contrast, lair uses the predictable [Proc](https://docs.raku.org/type/Proc) A
 
 ## Focus
 
-lair is quiet by default, presenting only the logs of your commands. This reduces log noise, reducing time and cloud costs.
+lair is quiet by default, presenting only the logs of your commands. This reduces log noise, saving time and cloud costs.
 
 ## Portability
 
