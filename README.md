@@ -41,10 +41,10 @@ We don't believe in vendor locking for software development tools.
 
 lair runs on a wide variety of platforms, including Linux, UNIX, and Windows. This helps to promote a higher degree of portability for your applications.
 
-stdlib > `run` > `shell`
+lair is operating system agnostic, programming language agnostic, and build system agnostic. In fact, we recommend delegating many tasks from lair to project specific build systems!
 
 ## Speed
 
-lair is designed for low latency. This should yield valuable time back to you. Spend the extra time developing your main applications and libraries, or just grabbing a cup of coffee!
+lair is designed for low latency. This should yield valuable time back to you. Spend the extra time developing your main applications and libraries, or just grabbing a cup of coffee.
 
 🦋🦋🦋
