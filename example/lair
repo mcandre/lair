@@ -1,0 +1,33 @@
+#!/usr/bin/env raku
+use File::Directory::Tree;
+
+sub default {
+    test;
+}
+
+sub build {
+    "bin".IO.mkdir :p;
+    run <cc -o bin/hello hello.c>;
+}
+
+sub clean {
+    rmtree 'bin';
+}
+
+sub test {
+    build;
+    run <bin/hello>;
+}
+
+if not @*ARGS {
+    @*ARGS = ['default'];
+}
+
+for @*ARGS -> $arg {
+    if not &::($arg):exists {
+        note "No such task: $arg";
+        exit 1;
+    }
+
+    &::($arg)();
+}

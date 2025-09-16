@@ -1,0 +1,26 @@
+{
+    "meta-version": "0",
+    "raku": "6.d",
+    "name": "lair",
+    "api": "0",
+    "version": "0.0.1",
+    "auth": "zef:mcandre",
+    "description": "a lightweight build system",
+    "license": "FreeBSD",
+    "depends": [
+        "File::Directory::Tree:ver<0.2>"
+    ],
+    "authors": [
+        "Andrew Pennebaker"
+    ],
+    "support": {
+        "bugtracker": "https://github.com/mcandre/lair/issues",
+        "source": "https://github.com/mcandre/lair.git"
+    },
+    "tags": [
+        "build-system",
+        "task-runner",
+        "ecosystem",
+        "toolchain"
+    ]
+}
