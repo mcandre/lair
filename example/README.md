@@ -14,6 +14,11 @@ Hello, World!
 * a UNIX-like environment, e.g. [WSL](https://learn.microsoft.com/en-us/windows/wsl/)
 * Install additional development components via `./install`
 
+## Recommended
+
+* [asdf](https://asdf-vm.com/)
+* [asdf-raku](https://github.com/m-dango/asdf-raku)
+
 # TEST
 
 ```console
