@@ -55,6 +55,6 @@ lair is designed for low overhead, so that the bulk of the CPU time is reserved 
 
 ## Flexibility
 
-Extend your lairs to fit your project needs. Execute tasks in [parallel](https://docs.raku.org/language/concurrency). The sky's the limit!
+Extend your lairs to fit your project needs. Execute tasks in [parallel](https://docs.raku.org/language/concurrency). Design your tasks like make `.PHONY:` by default. The sky's the limit!
 
 🦋🦋🦋
