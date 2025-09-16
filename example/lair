@@ -1,33 +1,41 @@
 #!/usr/bin/env raku
 use File::Directory::Tree;
 
-sub default {
-    test;
-}
-
-sub build {
-    "bin".IO.mkdir :p;
-    run <cc -o bin/hello hello.c>;
-}
-
-sub clean {
-    rmtree 'bin';
-}
-
-sub test {
-    build;
-    run <bin/hello>;
-}
-
-if not @*ARGS {
-    @*ARGS = ['default'];
-}
-
-for @*ARGS -> $arg {
-    if not &::($arg):exists {
-        note "No such task: $arg";
-        exit 1;
+class Lair {
+    method default {
+        self.test;
     }
 
-    &::($arg)();
+    method build {
+        "bin".IO.mkdir :p;
+        run <cc -o bin/hello hello.c>;
+    }
+
+    method clean {
+        rmtree 'bin';
+    }
+
+    method test {
+        self.build;
+        run <bin/hello>;
+    }
 }
+
+sub main {
+    my $lair = Lair.new;
+
+    if not @*ARGS {
+        @*ARGS = ['default'];
+    }
+
+    for @*ARGS -> $arg {
+        if not $lair.can($arg) {
+            note "No such task: $arg";
+            exit 1;
+        }
+
+        $lair."$arg"();
+    }
+}
+
+main;

@@ -1,18 +1,30 @@
 #!/usr/bin/env raku
 
-sub default {
-    run <zef install --force .>
-}
-
-if not @*ARGS {
-    @*ARGS = ['default'];
-}
-
-for @*ARGS -> $arg {
-    if not &::($arg):exists {
-        note "No such task: $arg";
-        exit 1;
+class Lair {
+    method default {
+        self.zef;
     }
 
-    &::($arg)();
+    method zef {
+        run <zef install --force .>;
+    }
 }
+
+sub main {
+    my $lair = Lair.new;
+
+    if not @*ARGS {
+        @*ARGS = ['default'];
+    }
+
+    for @*ARGS -> $arg {
+        if not $lair.can($arg) {
+            note "No such task: $arg";
+            exit 1;
+        }
+
+        $lair."$arg"();
+    }
+}
+
+main;
