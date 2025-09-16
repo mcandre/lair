@@ -51,6 +51,6 @@ lair is operating system agnostic, programming language agnostic, and build syst
 
 ## Speed
 
-lair is designed for low latency. This should yield valuable time back to you. Spend the extra time developing your main applications and libraries, or just grabbing a cup of coffee.
+lair is designed for low overhead, so that the bulk of your CPU time is dedicated to executing your build commands. Spend the extra time developing your projects, or just grabbing a cup of coffee.
 
 🦋🦋🦋
