@@ -51,6 +51,10 @@ lair is operating system agnostic, programming language agnostic, and build syst
 
 ## Speed
 
-lair is designed for low overhead, so that the bulk of your CPU time is dedicated to executing your build commands. Spend the extra time developing your projects, or just grabbing a cup of coffee.
+lair is designed for low overhead, so that the bulk of the CPU time is reserved for executing your build commands. Spend the extra time developing your projects, or just grabbing a cup of coffee.
+
+## Flexibility
+
+Extend your lairs to fit your project needs. Execute tasks in [parallel](https://docs.raku.org/language/concurrency). The sky's the limit!
 
 🦋🦋🦋
