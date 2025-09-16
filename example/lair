@@ -25,13 +25,13 @@ sub main {
     my $lair = Lair.new;
 
     if not @*ARGS {
-        @*ARGS = ['default'];
+        @*ARGS = ['default']
     }
 
     for @*ARGS -> $arg {
         if not $lair.can($arg) {
             note "No such task: $arg";
-            exit 1;
+            exit 1
         }
 
         $lair."$arg"()
