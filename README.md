@@ -4,6 +4,9 @@
 
 ```console
 $ cd example
+
+$ ./install
+
 $ ./lair
 Hello, World!
 ```
@@ -18,6 +21,10 @@ lair provides conventions for automating common computer tasks.
 
 * [Raku](https://raku.org/) 2025.06.1+
 * a UNIX-like environment, e.g. [WSL](https://learn.microsoft.com/en-us/windows/wsl/)
+
+## Recommended
+
+* [File::Directory::Tree](https://raku.land/zef:raku-community-modules/File::Directory::Tree)
 
 # LICENSE
 
